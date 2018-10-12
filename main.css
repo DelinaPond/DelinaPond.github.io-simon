@@ -1,0 +1,26 @@
+.gameButton{
+    height: 200px;
+    width: 200px;
+    border: solid;
+}
+#green{
+    background-color: darkgreen;
+}
+#blue{
+    background-color: darkblue;
+}
+#yellow{
+    background-color: darkgoldenrod;
+}
+#red{
+    background-color: darkred;
+}
+
+.gameDiv{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-between;
+    width: 600px;
+    height: 500px;
+}
