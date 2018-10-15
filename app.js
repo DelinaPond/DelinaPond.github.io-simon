@@ -84,7 +84,7 @@ function compMoves () {
 
 // created functions to background the light divs to be called in previous function compMoves(line 40)
 function topLeft () {
-    green.style.backgroundColor = "green"
+    green.style.backgroundColor = "lightgreen"
 }
 
 function topRight () {
@@ -101,10 +101,10 @@ function bottomRight () {
 
 // function to change game light colors back to original (styled strangely for easy visibility, will update later)
 function clearLights () {
-    green.style.backgroundColor = "orange"
-    red.style.backgroundColor = "purple"
-    blue.style.backgroundColor = "black"
-    yellow.style.backgroundColor = "white"
+    green.style.backgroundColor = "darkgreen"
+    red.style.backgroundColor = "darkred"
+    blue.style.backgroundColor = "darkblue"
+    yellow.style.backgroundColor = "darkgoldenrod"
 
 }
 
@@ -164,7 +164,7 @@ function checkMoves () {
            console.log("incorrect")
            playerMoves = []
            moves = []
-           turn = 01;
+           turn = 1;
            counter.innerHTML = turn;
        }
        

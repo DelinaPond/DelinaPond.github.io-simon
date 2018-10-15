@@ -4,16 +4,16 @@
     border: solid;
 }
 #green{
-    background-color: grey;
+    background-color: darkgreen;
 }
 #blue{
-    background-color: grey;
+    background-color: darkblue;
 }
 #yellow{
-    background-color: grey;
+    background-color: darkgoldenrod;
 }
 #red{
-    background-color: grey;
+    background-color: darkred;
 }
 
 .gameDiv{
