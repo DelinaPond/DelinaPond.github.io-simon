@@ -107,17 +107,29 @@ function clearLights () {
 green.addEventListener('click', function () {
     playerMoves.push(1);
     topLeft();
+    setTimeout( function () {
+        clearLights();
+    }, 200)
     
 } )
 red.addEventListener('click', function () {
     playerMoves.push(2);
     topRight();
+    setTimeout( function () {
+        clearLights();
+    }, 200)
 } )
 yellow.addEventListener('click', function () {
     playerMoves.push(3);
     bottomLeft();
+    setTimeout( function () {
+        clearLights();
+    }, 200)
 } )
 blue.addEventListener('click', function () {
     playerMoves.push(4);
     bottomRight();
+    setTimeout( function () {
+        clearLights();
+    }, 200)
 } )
