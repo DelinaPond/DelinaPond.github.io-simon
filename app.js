@@ -150,32 +150,26 @@ function checkMoves () {
     for (let x = 0; x < playerMoves.length; x++){
        if (playerMoves[x] === moves[x]){
            console.log("correct")
-         if(playerMoves.length === moves.length){
-            startGame();
-
-         
-           playerMoves = []
+           
+         if(playerMoves.length === moves.length && playerMoves[x] === moves[x]){
+            playerMoves = []
+            turn++;
+             counter.innerHTML = turn;
+            
+          
+           startGame();
          }
        }
        else{
            console.log("incorrect")
            playerMoves = []
            moves = []
+           turn = 01;
+           counter.innerHTML = turn;
        }
+       
     }
 
-    // if (playerMoves[playerMoves.length -1] == moves[moves.length -1]){
-    //     turn++;
-    //     counter.innerHTML = turn;
-    //     console.log("Correct")
-    //     setInterval(compMoves, 300)
-        
-        
-    // // }
-    // if(playerMoves[playerMoves.length -1] !== moves[moves.length -1]){
-    //     console.log("You are not correct")
-    
-    // }
-    // clearLights();
+  
   
 }
