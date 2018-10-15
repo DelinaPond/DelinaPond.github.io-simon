@@ -6,13 +6,14 @@ let yellow = document.getElementById('yellow');
 let start = document.getElementById('startButton');
 let counter = document.getElementById('roundCounter');
 let on = document.getElementById('turnOn')
-
+console.log(colorArr.document)
 let interval; 
 let playerMoves = [];
 let moves = [];
 let lightOrder;
-flash = 0;
+change = 0;
 turn = 1;
+
 
 // start button event begins game and logs the counter
 
@@ -40,7 +41,7 @@ function startGame() {
 function compMoves () {
 
 
-    if (flash == turn) {
+    if (change == turn) {
         clearInterval(interval);
         lightOrder = false;
         clearLights();
@@ -49,28 +50,28 @@ function compMoves () {
     if (lightOrder) {
             clearLights();
     setTimeout ( function () {
-    if (moves[flash] == 1){
+    if (moves[change] == 1){
         topLeft();
         
         
     } 
-    if (moves[flash] == 2) {
+    if (moves[change] == 2) {
         topRight();
         
        
     }
-    if (moves[flash] == 3){
+    if (moves[change] == 3){
         bottomLeft();
         
         
     } 
-    if (moves[flash] == 4){
+    if (moves[change] == 4){
         bottomRight();
         
       
 
     }
-    flash++;
+    change++;
     }, 800);
   }
 }
@@ -101,4 +102,22 @@ function clearLights () {
 
 }
 
+// making game light divs clickable so player can click on game divs and they "light up"
 
+green.addEventListener('click', function () {
+    playerMoves.push(1);
+    topLeft();
+    
+} )
+red.addEventListener('click', function () {
+    playerMoves.push(2);
+    topRight();
+} )
+yellow.addEventListener('click', function () {
+    playerMoves.push(3);
+    bottomLeft();
+} )
+blue.addEventListener('click', function () {
+    playerMoves.push(4);
+    bottomRight();
+} )
